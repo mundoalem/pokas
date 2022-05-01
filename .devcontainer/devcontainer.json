@@ -1,0 +1,33 @@
+{
+	"name": "Pokas",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "development",
+	"workspaceFolder": "/home/vscode/go/1.18.1/github.com/mundoalem/pokas",
+	"shutdownAction": "stopCompose",
+	"postCreateCommand": "go mod tidy && go mod vendor",
+	"remoteUser": "vscode",
+	"settings": {
+        "editor.defaultFormatter": "golang.go-nightly",
+		"editor.formatOnSave": true,
+		"editor.rulers": [
+			80,
+			120
+		],
+        "git.enableCommitSigning": true,
+		"go.useLanguageServer": true,
+		"gopls": {
+			"formatting.gofumpt": true,
+		},
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "/usr/bin/bash"
+			}
+		},
+		"terminal.integrated.defaultProfile.linux": "bash"
+	},
+	"extensions": [
+		"eamodio.gitlens",
+		"golang.go-nightly"
+	],
+	"features": {}
+}

@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  development:
+    build:
+      context: .
+      dockerfile: configs/containers/development/Dockerfile
+    hostname: development
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - .:/home/vscode/go/1.18.1/github.com/mundoalem/pokas:cached
+      - ./assets/history:/home/vscode/.history

@@ -1,0 +1,19 @@
+name: Setup golang
+description: Setup golang and required tools for the pipeline.
+
+inputs:
+  go-version:
+    required: true
+    default: 1.18.1
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-go@v2
+      with:
+        go-version: ${{ inputs.go-version }}
+    - run: |
+        go install github.com/securego/gosec/v2/cmd/gosec@latest
+        go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+        go install mvdan.cc/gofumpt@latest
+      shell: bash
