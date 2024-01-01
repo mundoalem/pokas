@@ -1,0 +1,58 @@
+#
+# FILES
+#
+
+*.dll
+*.dylib
+*.exe
+*.exe~
+*.out
+*.so
+*.test
+
+#
+# MACOS
+#
+
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.com.apple.timemachine.donotpresent
+.DocumentRevisions-V100
+.DS_Store
+.fseventsd
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+*.icloud
+Icon
+Network Trash Folder
+Temporary Items
+
+#
+# EDITORS
+#
+
+.idea/
+.vscode/
+
+#
+# PROJECT
+#
+
+coverage.txt
+
+.tmp/history/*
+build/*
+dist/*
+vendor/*
+
+!.tmp/history/.gitkeep
+!build/.gitkeep
+!dist/.gitkeep
+!vendor/.gitkeep
+
+
